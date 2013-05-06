@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="hy7-3l-aam">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--I Pad Game View Controller-->
+        <scene sceneID="ubE-IH-vc5">
+            <objects>
+                <viewController storyboardIdentifier="initialView" id="hy7-3l-aam" customClass="iPadGameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p4R-3N-tTP">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="ZFD-Z1-XaU">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="The Matching Game" id="S36-rX-Em1"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5xR-zW-q0V">
+                                <rect key="frame" x="15" y="346" width="339" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="PLAY NOW">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jty-Wa-dBJ" kind="modal" identifier="gameStarts" id="ZR7-rT-yDn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wB7-S5-lGB">
+                                <rect key="frame" x="15" y="850" width="658" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Choose Settings">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChooseSettingsSelected:" destination="hy7-3l-aam" eventType="touchUpInside" id="wiv-tu-eCK"/>
+                                    <segue destination="UJg-Qf-k3c" kind="modal" id="Jjg-SR-wAu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ui-aL-MlE">
+                                <rect key="frame" x="380" y="390" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K9T-tY-mrh">
+                                <rect key="frame" x="550" y="390" width="190" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Difficulty:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fPv-D7-7pq">
+                                <rect key="frame" x="405" y="475" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yun-QB-OtO">
+                                <rect key="frame" x="550" y="483" width="165" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="GameDifficultyLabel" destination="Yun-QB-OtO" id="ReP-CA-Ea9"/>
+                        <outlet property="GameTypeLabel" destination="K9T-tY-mrh" id="Nl3-cj-ewJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wt1-7o-q7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2978" y="-4350"/>
+        </scene>
+        <!--I Pad Game View Controller-->
+        <scene sceneID="rBq-Jl-ggt">
+            <objects>
+                <viewController id="UJg-Qf-k3c" customClass="iPadGameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8In-91-ioM">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sMT-NR-rQT">
+                                <rect key="frame" x="15" y="74" width="154" height="141"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Math">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MathPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="mNf-Bn-Thq"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aZc-YV-blf">
+                                <rect key="frame" x="20" y="304" width="149" height="206"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Word to Word">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="medium_blue_450px.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="WordToWordPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="167-gz-MBg"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8P3-ho-n0x">
+                                <rect key="frame" x="18" y="539" width="146" height="170"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Word to Sound">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="WordToSoundPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="CvE-OP-IxL"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kh5-DR-8nQ">
+                                <rect key="frame" x="20" y="768" width="144" height="206"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sound to Sound">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SoundToSoundPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="n1U-SW-lOR"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" id="hwy-Ul-n71">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Choose Game Type" id="5TF-h2-b0c"/>
+                                </items>
+                            </navigationBar>
+<<<<<<< HEAD
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="dmZ-lF-jaU">
+                                <rect key="frame" x="509" y="74" width="239" height="246"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.1529411765" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+=======
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hwy-Ul-n71" firstAttribute="trailing" secondItem="8In-91-ioM" secondAttribute="trailing" type="default" id="5Ez-Z5-qsF"/>
+                            <constraint firstItem="hwy-Ul-n71" firstAttribute="leading" secondItem="8In-91-ioM" secondAttribute="leading" type="default" id="8jb-WN-czW"/>
+                            <constraint firstItem="8P3-ho-n0x" firstAttribute="centerX" secondItem="kh5-DR-8nQ" secondAttribute="centerX" type="default" id="8lL-EE-JvY"/>
+                            <constraint firstItem="sMT-NR-rQT" firstAttribute="top" secondItem="8In-91-ioM" secondAttribute="top" constant="74" id="J4R-c7-YNb"/>
+                            <constraint firstAttribute="trailing" secondItem="sMT-NR-rQT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Jwy-Ca-0SE"/>
+                            <constraint firstAttribute="bottom" secondItem="kh5-DR-8nQ" secondAttribute="bottom" constant="36" id="LXD-6A-7K1"/>
+                            <constraint firstItem="kh5-DR-8nQ" firstAttribute="leading" secondItem="8In-91-ioM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="V82-7V-abb"/>
+                            <constraint firstItem="aZc-YV-blf" firstAttribute="top" secondItem="8In-91-ioM" secondAttribute="top" constant="309" id="atF-h3-UY1"/>
+                            <constraint firstAttribute="trailing" secondItem="kh5-DR-8nQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cnV-u4-mop"/>
+                            <constraint firstAttribute="bottom" secondItem="8P3-ho-n0x" secondAttribute="bottom" constant="265" id="fCZ-lw-ZhM"/>
+                            <constraint firstItem="hwy-Ul-n71" firstAttribute="top" secondItem="8In-91-ioM" secondAttribute="top" type="default" id="gIp-c0-RXb"/>
+                            <constraint firstItem="aZc-YV-blf" firstAttribute="leading" secondItem="8In-91-ioM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uhz-bp-4Xc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5e-Sx-H5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2877" y="-3480"/>
+        </scene>
+        <!--I Pad Game View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <viewController id="2" customClass="iPadGameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Sh-ka-bTF">
+                                <items>
+                                    <navigationItem title="Difficulty" id="x05-9b-R13"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmZ-lF-jaU">
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.1529411765" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" type="user" id="FEj-2D-2gz"/>
+                                </constraints>
+>>>>>>> c085c70950a7cb504790e66469369212d3cad0b9
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <size key="titleShadowOffset" width="10" height="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="VERY EASY">
+                                            <attributes>
+                                                <color key="NSColor" red="0.52941176469999995" green="0.80784313730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="EasyPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="MQE-iO-1Tm"/>
+                                    <segue destination="hy7-3l-aam" kind="modal" id="buz-8S-eAG"/>
+                                </connections>
+                            </button>
+<<<<<<< HEAD
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RaZ-BG-H2S">
+                                <rect key="frame" x="509" y="341" width="239" height="283"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xKG-K2-Jq1">
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.1529411765" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" type="user" id="dBT-kR-Hwn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <size key="titleShadowOffset" width="10" height="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="EASY">
+                                            <attributes>
+                                                <color key="NSColor" red="0.52941176469999995" green="0.80784313730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="EasyPressed:" destination="2" eventType="touchUpInside" id="uEt-0s-oa4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaZ-BG-H2S">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" type="user" id="yGX-R3-p0X"/>
+                                </constraints>
+>>>>>>> c085c70950a7cb504790e66469369212d3cad0b9
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="MEDIUM">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MediumPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="gZE-68-dRB"/>
+                                    <segue destination="hy7-3l-aam" kind="modal" id="25i-zW-CoR"/>
+                                </connections>
+                            </button>
+<<<<<<< HEAD
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XAe-Y0-shR">
+                                <rect key="frame" x="509" y="656" width="239" height="288"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAe-Y0-shR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" type="user" id="B0k-1x-wor"/>
+                                </constraints>
+>>>>>>> c085c70950a7cb504790e66469369212d3cad0b9
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="HARD">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="HardPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="CXy-W0-mFD"/>
+                                    <segue destination="hy7-3l-aam" kind="modal" id="zat-1f-rl3"/>
+                                </connections>
+                            </button>
+<<<<<<< HEAD
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="TVJ-9Q-C0c">
+                                <rect key="frame" x="49" y="175" width="671" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Word to Word"/>
+                                    <segment title="Sound to Sound"/>
+                                    <segment title="Word to Sound"/>
+                                    <segment title="Math"/>
+                                </segments>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDl-W1-zyW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="Kkq-6J-M8m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="VERY HARD">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="HardPressed:" destination="2" eventType="touchUpInside" id="hdx-hO-KOy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LDl-W1-zyW" secondAttribute="bottom" constant="15" id="4PB-5t-AvQ"/>
+                            <constraint firstItem="LDl-W1-zyW" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7ZD-OA-12y"/>
+                            <constraint firstItem="XAe-Y0-shR" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9TY-fE-Gso"/>
+                            <constraint firstItem="xKG-K2-Jq1" firstAttribute="top" secondItem="dmZ-lF-jaU" secondAttribute="bottom" constant="15" type="user" id="A9J-JW-Mh9"/>
+                            <constraint firstAttribute="trailing" secondItem="RaZ-BG-H2S" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Efr-N2-U0c"/>
+                            <constraint firstItem="RaZ-BG-H2S" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FSb-zh-jwh"/>
+                            <constraint firstItem="5Sh-ka-bTF" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="Fpp-1N-Ohl"/>
+                            <constraint firstAttribute="trailing" secondItem="dmZ-lF-jaU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="I8b-wR-x7s"/>
+                            <constraint firstItem="RaZ-BG-H2S" firstAttribute="top" secondItem="xKG-K2-Jq1" secondAttribute="bottom" constant="15" type="user" id="ILc-OK-fDN"/>
+                            <constraint firstItem="dmZ-lF-jaU" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Q2C-y6-6Ih"/>
+                            <constraint firstItem="5Sh-ka-bTF" firstAttribute="top" secondItem="5" secondAttribute="top" type="user" id="QFg-LO-K7j"/>
+                            <constraint firstAttribute="trailing" secondItem="LDl-W1-zyW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="T22-GD-yku"/>
+                            <constraint firstAttribute="trailing" secondItem="xKG-K2-Jq1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="V8A-Zk-hRs"/>
+                            <constraint firstItem="xKG-K2-Jq1" firstAttribute="top" secondItem="5" secondAttribute="top" constant="248" type="user" id="VVl-5Y-npm"/>
+                            <constraint firstItem="dmZ-lF-jaU" firstAttribute="top" secondItem="5Sh-ka-bTF" secondAttribute="bottom" constant="15" type="user" id="bAE-P8-Dhd"/>
+                            <constraint firstAttribute="trailing" secondItem="XAe-Y0-shR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bMf-6K-WYR"/>
+                            <constraint firstItem="xKG-K2-Jq1" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="beK-yi-pRz"/>
+                            <constraint firstItem="XAe-Y0-shR" firstAttribute="top" secondItem="RaZ-BG-H2S" secondAttribute="bottom" constant="15" type="user" id="cTm-bC-tDv"/>
+                            <constraint firstItem="RaZ-BG-H2S" firstAttribute="top" secondItem="5" secondAttribute="top" constant="437" type="user" id="cUb-p9-mUZ"/>
+                            <constraint firstAttribute="bottom" secondItem="XAe-Y0-shR" secondAttribute="bottom" constant="204" type="user" id="mHd-rV-jJf"/>
+                            <constraint firstItem="5Sh-ka-bTF" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="yiQ-4n-SB6"/>
+                            <constraint firstItem="dmZ-lF-jaU" firstAttribute="top" secondItem="5" secondAttribute="top" constant="59" type="user" id="zOf-99-i59"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1794" y="-3370"/>
+        </scene>
+        <!--I Pad Game View Controller-->
+        <scene sceneID="Oev-eT-TTY">
+            <objects>
+                <viewController id="4Dc-JS-sAC" customClass="iPadGameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oBR-ex-Quq">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFu-bI-cu2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pra-8E-aGJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Difficulty:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F4-Ig-van">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT9-tP-zuz">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yS-Im-Gnz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="545" id="YDE-5Y-zj9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play Game!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+>>>>>>> c085c70950a7cb504790e66469369212d3cad0b9
+                                <connections>
+                                    <action selector="gameTypeSegmentPressed:" destination="UJg-Qf-k3c" eventType="valueChanged" id="az8-WU-VLk"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="7tk-5a-VDC">
+                                <rect key="frame" x="259" y="360" width="251" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Easy"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard"/>
+                                </segments>
+                                <connections>
+                                    <action selector="difficultySegmentPressed:" destination="UJg-Qf-k3c" eventType="valueChanged" id="u3R-WQ-Xj3"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2v2-W8-Gi4">
+                                <rect key="frame" x="315" y="806" width="139" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Submit Settings">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitSettingsPressed:" destination="UJg-Qf-k3c" eventType="touchUpInside" id="7zY-b7-SRj"/>
+                                    <segue destination="hy7-3l-aam" kind="modal" id="Ffk-gD-vWl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="EasyButton" destination="dmZ-lF-jaU" id="oV7-PI-pFL"/>
+                        <outlet property="HardButton" destination="XAe-Y0-shR" id="K79-Db-6tf"/>
+                        <outlet property="MathButton" destination="sMT-NR-rQT" id="9nL-vf-vDf"/>
+                        <outlet property="MediumButton" destination="RaZ-BG-H2S" id="Wdy-js-kOg"/>
+                        <outlet property="SoundToSoundButton" destination="kh5-DR-8nQ" id="RAn-tN-Gvy"/>
+                        <outlet property="WordToSoundButton" destination="8P3-ho-n0x" id="zDB-71-Bbc"/>
+                        <outlet property="WordToWordButton" destination="aZc-YV-blf" id="crs-mv-83u"/>
+                        <outlet property="difficultyControl" destination="7tk-5a-VDC" id="HGK-gt-LXc"/>
+                        <outlet property="gameTypeControl" destination="TVJ-9Q-C0c" id="ioY-j8-pbz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5e-Sx-H5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3814" y="-4250"/>
+        </scene>
+        <!--Gameplay View Controller-->
+        <scene sceneID="a54-7M-3dy">
+            <objects>
+                <viewController id="Jty-Wa-dBJ" customClass="GameplayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gOH-Ja-cwJ">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pAY-N2-kli">
+                                <rect key="frame" x="0.0" y="56" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EwF-wO-oSZ">
+                                <rect key="frame" x="0.0" y="965" width="768" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="h58-qV-X2X" kind="modal" id="0Pm-0W-rn5"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RnB-bq-8ad">
+                                <rect key="frame" x="192" y="56" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Yi-R8-ytl">
+                                <rect key="frame" x="384" y="56" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H8B-jz-n3x">
+                                <rect key="frame" x="576" y="56" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ViZ-BC-aC2">
+                                <rect key="frame" x="0.0" y="284" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gUy-sm-Cy8">
+                                <rect key="frame" x="192" y="285" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k7W-g3-ol9">
+                                <rect key="frame" x="384" y="285" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6YO-1Q-uZ1">
+                                <rect key="frame" x="576" y="285" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="R6w-z5-18H">
+                                <rect key="frame" x="0.0" y="512" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HRZ-hm-03p">
+                                <rect key="frame" x="192" y="513" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u0r-rS-1xj">
+                                <rect key="frame" x="384" y="513" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wU2-sX-6eX">
+                                <rect key="frame" x="576" y="513" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BqY-nW-AUr">
+                                <rect key="frame" x="0.0" y="740" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iiO-Kw-zLO">
+                                <rect key="frame" x="192" y="741" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eWB-RD-Aep">
+                                <rect key="frame" x="384" y="741" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XI0-9w-bZm">
+                                <rect key="frame" x="576" y="741" width="192" height="220"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="medium_blue_450px.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="CJB-ht-Goc" kind="modal" identifier="winSegue'" id="3lo-ko-fh2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSv-8p-wpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1277" y="-3513"/>
+        </scene>
+        <!--winView-->
+        <scene sceneID="2iS-7h-lPR">
+            <objects>
+                <viewController id="CJB-ht-Goc" userLabel="winView" customClass="iPadGameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4lF-cs-JaN" userLabel="winView">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZMw-6C-iYX">
+                                <rect key="frame" x="360" y="593" width="102" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hy7-3l-aam" kind="modal" id="FmD-ZV-7vN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="YOU WIN!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PZP-Or-BaK">
+                                <rect key="frame" x="344" y="420" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y6R-TB-GiJ">
+                                <rect key="frame" x="361" y="675" width="101" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jty-Wa-dBJ" kind="modal" identifier="gameStarts" id="VhV-fr-KDc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLi-HB-XVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="-2713"/>
+        </scene>
+        <!--I Pad Game View Controller-->
+        <scene sceneID="PsW-8v-lHt">
+            <objects>
+                <viewController id="h58-qV-X2X" customClass="iPadGameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C1W-lJ-MC9">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="FA0-0B-bXp">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <items>
+                                    <navigationItem title="Pause Menu" id="NIZ-A9-75z"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AKB-MP-9a9">
+                                <rect key="frame" x="0.0" y="43" width="768" height="249"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hy7-3l-aam" kind="modal" id="aFK-eh-YGn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRI-bH-g15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31" y="-5541"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="medium_blue_450px.png" width="450" height="178"/>
+    </resources>
+    <classes>
+        <class className="GameplayViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameplayViewController.h"/>
+        </class>
+        <class className="iPadGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="ChooseSettingsSelected:"/>
+                <relationship kind="action" name="EasyPressed:"/>
+                <relationship kind="action" name="HardPressed:"/>
+                <relationship kind="action" name="MathPressed:"/>
+                <relationship kind="action" name="MediumPressed:"/>
+                <relationship kind="action" name="NotTimedPressed:"/>
+                <relationship kind="action" name="SinglePlayerPressed:"/>
+                <relationship kind="action" name="SoundToSoundPressed:"/>
+                <relationship kind="action" name="TimedPressed:"/>
+                <relationship kind="action" name="TwoPlayerPressed:"/>
+                <relationship kind="action" name="WordToSoundPressed:"/>
+                <relationship kind="action" name="WordToWordPressed:"/>
+                <relationship kind="action" name="difficultySegmentPressed:"/>
+                <relationship kind="action" name="gameTypeSegmentPressed:"/>
+                <relationship kind="action" name="submitSettingsPressed:"/>
+                <relationship kind="outlet" name="EasyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="GameDifficultyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="GameTypeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="HardButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="MathButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="MediumButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="NumPlayersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SoundToSoundButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="TimerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="WordToSoundButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="WordToWordButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="difficultyControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="gameTypeControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+<<<<<<< HEAD
+        <segue reference="zat-1f-rl3"/>
+        <segue reference="ZR7-rT-yDn"/>
+=======
+        <segue reference="ZR7-rT-yDn"/>
+        <segue reference="aGb-Xe-41E"/>
+        <segue reference="Mn1-bz-cjO"/>
+        <segue reference="Sik-EF-uvJ"/>
+>>>>>>> c085c70950a7cb504790e66469369212d3cad0b9
+    </inferredMetricsTieBreakers>
+</document>
